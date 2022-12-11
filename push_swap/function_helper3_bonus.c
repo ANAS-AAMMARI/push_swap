@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 17:59:11 by aaammari          #+#    #+#             */
-/*   Updated: 2022/12/10 14:47:07 by aaammari         ###   ########.fr       */
+/*   Updated: 2022/12/11 10:54:33 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,23 @@ void	check_empty_string_param(char **av)
 			print_errors();
 		i++;
 	}	
+}
+
+void	free_2d(char **sp)
+{
+	int	i;
+
+	i = 0;
+	if (!sp)
+		return ;
+	while (sp[i])
+		free(sp[i++]);
+	free(sp);
+}
+
+void	free_all(char **num, t_nb_stack *a, t_nb_stack *b)
+{
+	free_2d(num);
+	free_node(a);
+	free_node(b);
 }

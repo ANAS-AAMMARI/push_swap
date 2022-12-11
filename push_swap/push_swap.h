@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 10:06:07 by aaammari          #+#    #+#             */
-/*   Updated: 2022/12/10 14:44:41 by aaammari         ###   ########.fr       */
+/*   Updated: 2022/12/11 10:48:08 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include<unistd.h>
 # include<stdlib.h>
-# include <stdio.h>
 
 typedef struct st_number
 {

@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 10:06:07 by aaammari          #+#    #+#             */
-/*   Updated: 2022/12/10 14:47:36 by aaammari         ###   ########.fr       */
+/*   Updated: 2022/12/11 10:54:49 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ typedef struct st_number
 	struct st_number	*next;
 }t_nb_stack;
 
+void		free_all(char **num, t_nb_stack *a, t_nb_stack *b);
+void		free_2d(char **sp);
 void		check_empty_string_param(char **av);
 char		*get_next_line(int fd);
 int			get_nb_index(char *av[], int len);

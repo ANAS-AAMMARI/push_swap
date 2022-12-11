@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 14:40:04 by aaammari          #+#    #+#             */
-/*   Updated: 2022/12/09 16:31:01 by aaammari         ###   ########.fr       */
+/*   Updated: 2022/12/11 10:55:40 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ int	main(int ac, char *av[])
 	char		**numbers;
 	char		*cmd;
 	t_nb_stack	*b;
-	static int	i;
 
 	cmd = NULL;
 	if (ac > 1)
@@ -103,13 +102,7 @@ int	main(int ac, char *av[])
 			ft_putendl_fd("OK", 1);
 		else
 			ft_putendl_fd("KO", 1);
-		while (numbers[i])
-		{
-			free(numbers[i++]);
-		}
-		free(numbers);
-		free_node(a);
-		free_node(b);
+		free_all(numbers, a, b);
 	}
 	return (0);
 }
